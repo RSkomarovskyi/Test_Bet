@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<head> 
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<script src="http://cdn.jquerytools.org/1.2.6/full/jquery.tools.min.js"></script>
+</head>
+<html>
+	<body>
+		<script>
+			$(function() {
+    			$(".scrollable").scrollable({ vertical: true, mousewheel: true});
+			});
+			function diss() {
+				document.getElementById('tromb').style.display='none';
+				document.getElementById('wait1').style.visibility='visible';
+			}
+
+		</script>
+		<div id="main">
+			<div id="tromb" onClick = "diss()">
+				<div id="trombpic"><img src="pic/trombpic.png" alt=""></div>
+				<div id="waittxt">please wait</div>
+				<div id="tv"><img src="pic/tel.png" alt=""></div>
+			</div>
+			<div id="section1">
+				<div id="head">
+					<div id="h1"><img src="pic/h1.png" alt=""></div>
+					<div id="h2">
+						<div id="h2sub1">balance:&nbsp;</div><div id="h2sub2">1 260 €</div></div>
+					<div id="h3div">
+						<button id = "h3"><img src="pic/h3.png" alt=""></button>
+					</div>
+					<div id="h4">12:45</div>
+				</div>
+				<div id="subpage">
+					<div id="check">
+						<div id="backdiv">
+							<button id="back"><img src="pic/back.png" alt="" id = "backimg"><span id="backtxt">back</span></button>
+						</div>
+						<div id="out">checkout</div>
+						<div id="homediv">
+							<button id="home"><img src="pic/home.png" alt="" id = "homeimg"><span id="hometxt">home</span></button>
+						</div>
+					</div>
+				</div>
+				<div id="title">
+					<div id="line1"></div>
+					<div id = "titletxt">enter your amount:</div>
+					<div id="line2"></div>
+				</div>
+				<div id="subpage2">
+					<form id="calc" name = "calc1">
+						<input type="text" name ="ans" readonly id="ipt">
+						<div class="numbtn"><input type = "button" value = "1" OnClick = "calc1.ans.value+='1'" class="num"></div> 
+						<div class="numbtn" id ="n2"><input type = "button" value = "2" OnClick = "calc1.ans.value+='2'" class="num"></div>
+						<div class="numbtn"><input type = "button" value = "3" OnClick = "calc1.ans.value+='3'" class="num"></div>
+						<div class="numbtn"><input type = "button" value = "4" OnClick = "calc1.ans.value+='4'" class="num"></div>
+						<div class="numbtn" id = "n5"><input type = "button" value = "5" OnClick = "calc1.ans.value+='5'" class="num"></div>
+						<div class="numbtn"><input type = "button" value = "6" OnClick = "calc1.ans.value+='6'" class="num"></div>
+						<div class="numbtn"><input type = "button" value = "7" OnClick = "calc1.ans.value+='7'" class="num"></div>
+						<div class="numbtn" id = "n8"><input type = "button" value = "8" OnClick = "calc1.ans.value+='8'" class="num"></div>
+						<div class="numbtn"><input type = "button" value = "9" OnClick = "calc1.ans.value+='9'" class="num"></div>
+						<div class="numbtn" id = "res"><input type = "button" value = "RESET" OnClick = "calc1.ans.value=''" class="num"></div>
+						<div class="numbtn" id = "n0"><input type = "button" value = "0" OnClick = "if (calc1.ans.value !=='') {calc1.ans.value+='0'}" class="num"></div>
+						<div class="numbtn" id = "del"><input type = "button" value = "DELETE" OnClick = "calc1.ans.value = calc1.ans.value.slice(0,-1)" class="num"></div>
+					</form>
+					<div id="inf">
+						<div id="btn2">
+							<div id="infb1"><button id="ib1"><span id="elicon"></span><span id="ib1txt">single</span></button></div>
+							<div id="infb2"><button id="ib2"><img src="pic/inf1btn.png" alt="" id="inf1btn"><span id="ib2txt">multiple</span></button></div>
+						</div>
+						<div id="wait">
+							<img src="pic/wait.png" alt="" id="wait1">
+						</div>
+						<div id="marbet">
+							<div id="mark">
+								<div id="market">Market:</div>
+								<div id="mtxt">14</div>
+							</div>
+							<div id="tbet">
+								<div id="bet">total bet:</div>
+								<div id="btxt">1 400 €</div>
+							</div>
+						</div>
+						<div id="pay">
+							<div id="divpay"><button id="pbtn1">PAY</button></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="section2">
+				<div id="sup"><a class = "prev" ><div id = "suparr"></div><div id = "suptxt">scroll up</div></a></div>
+				<div id="scrollable" class = "scrollable">
+					<div class="items">
+						<div class="empt"></div>
+						<div class = "bet">
+							<div class="bettxt">
+								<div class="bettxt1">3.12</div>
+								<div class="bettxt2">WIN Feyenoord</div>
+								<div class="bettxt3">Roma vs Feyenoord</div>
+							</div>
+							<button class="betbtn"></button>
+						</div>
+						<div class = "bet">
+							<div class="bettxt">
+								<div class="bettxt1">3.12</div>
+								<div class="bettxt2">WIN Feyenoord</div>
+								<div class="bettxt3">Roma vs Feyenoord</div>
+							</div>
+							<button class="betbtn"></button>
+						</div>
+						<div class = "bet">
+							<div class="bettxt">
+								<div class="bettxt1">3.12</div>
+								<div class="bettxt2">WIN Feyenoord</div>
+								<div class="bettxt3">Roma vs Feyenoord</div>
+							</div>
+							<button class="betbtn"></button>
+						</div>
+						<div class = "bet">
+							<div class="bettxt">
+								<div class="bettxt1">3.12</div>
+								<div class="bettxt2">WIN Feyenoord</div>
+								<div class="bettxt3">Roma vs Feyenoord</div>
+							</div>
+							<button class="betbtn"></button>
+						</div>
+						<div class = "bet">
+							<div class="bettxt">
+								<div class="bettxt1">3.12</div>
+								<div class="bettxt2">WIN Feyenoord</div>
+								<div class="bettxt3">Roma vs Feyenoord</div>
+							</div>
+							<button class="betbtn"></button>
+						</div>
+						<div class = "bet">
+							<div class="bettxt">
+								<div class="bettxt1">3.12</div>
+								<div class="bettxt2">WIN Feyenoord</div>
+								<div class="bettxt3">Roma vs Feyenoord</div>
+							</div>
+							<button class="betbtn"></button>
+						</div>
+						<div class = "bet">
+							<div class="bettxt">
+								<div class="bettxt1">3.12</div>
+								<div class="bettxt2">WIN Feyenoord</div>
+								<div class="bettxt3">Roma vs Feyenoord</div>
+							</div>
+							<button class="betbtn"></button>
+						</div>
+						<div class = "bet">
+							<div class="bettxt">
+								<div class="bettxt1">3.12</div>
+								<div class="bettxt2">WIN Feyenoord</div>
+								<div class="bettxt3">Roma vs Feyenoord</div>
+							</div>
+							<button class="betbtn"></button>
+						</div>
+						<div class = "bet">
+							<div class="bettxt">
+								<div class="bettxt1">3.12</div>
+								<div class="bettxt2">WIN Feyenoord</div>
+								<div class="bettxt3">Roma vs Feyenoord</div>
+							</div>
+							<button class="betbtn"></button>
+						</div>
+			
+					</div>
+				</div>
+				<div id="sdown"><a class = "next" ><div id = "sdtxt">scroll down</div><div id = "sdarr"></div></a></div>
+			</div>
+		</div>
+	</body>	
+</html>
